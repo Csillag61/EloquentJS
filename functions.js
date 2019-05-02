@@ -79,3 +79,48 @@ const hummus = function(factor) {
   
   console.log(findSolution(24));
   // → (((1 * 3) + 5) * 3)
+
+  function min(x, y){
+      if (x < y) return x;
+      else return  y;
+  }
+  console.log(min (0, 10));
+
+  //recursion
+
+  function isEven(n){ //max call stack size exceeded
+      if (n == 0) return true;
+      else if( n == 1) return false;
+      else if (n < 0) return isEven(n-2);
+      else return false;
+  }
+  console.log(isEven(50));
+  // → true
+  console.log(isEven(75));
+  // → false
+  console.log(isEven(-1));
+  // → false
+
+  function isEven(n){
+      if (n % 2 ==0 || n == 0) return true;
+      else return false;
+  }
+
+function countChar(string, ch){
+   let counted=0;
+   for (let i=0;  i<string.length; i++) {
+       if (string[i]==ch){
+           counted+=1;
+       }
+   }
+   return counted;
+}
+
+function countBs(string){
+    return countChar(string, "B");
+}
+
+console.log(countBs("BBC"));
+// → 2
+console.log(countChar("kakkerlak", "k"));
+// → 4
