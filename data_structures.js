@@ -115,7 +115,7 @@ console.log(nth(arrayToList([10, 20, 30]), 1));
 // → 20
 
 function deepEqual(a, b) {
-    if (a === b) return true;
+    if (a === b) return true;//both are objects
     
     if (a == null || typeof a != "object" ||
         b == null || typeof b != "object") return false;
